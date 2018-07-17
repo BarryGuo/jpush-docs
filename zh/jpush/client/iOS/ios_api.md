@@ -671,6 +671,20 @@ NSDictionary *remoteNotification = [launchOptions objectForKey: UIApplicationLau
   }
   completionHandler();  // 系统要求执行这个方法
 }
+
+```
+
+* 基于iOS12以上的版本，UserNotifications Framework新增回调方法[userNotificationCenter:openSettingsForNotification:],在3.1.1及以上版本JPUSHRegisterDelegate同样新增了对应的回调方法。当从应用外部通知界面或通知设置界面进入应用时，该方法将回调。
+
+```
+// iOS 12 Support
+- (void)jpushNotificationCenter:(UNUserNotificationCenter *)center openSettingsForNotification:(UNNotification *)notification{
+  if (notification) {
+    //从通知界面直接进入应用
+  }else{
+    //从通知设置界面进入应用
+  }
+}
 ```
 
 参考文档：[Handling Local and Remote Notifications][0]
@@ -880,6 +894,7 @@ iOS 设备收到一条本地通知，用户点击通知打开应用时，应用�
 	
 ```
 
+
 ### Method  AddNotification
 
 #### 支持版本
@@ -909,6 +924,11 @@ request中传入已有推送的request.requestIdentifier即更新已有的推送
   content.body = @"This is a test code";
   content.badge = @1;
   content.categoryIdentifier = @"Custom Category Name";
+  content.threadIdentifier = @"threadIdentifier";
+  if (@available(iOS 12.0, *)) {
+    content.summaryArgumentCount = 1;
+    content.summaryArgument = @"test app";
+  }
   
   // 5s后提醒 iOS 10 以上支持
   JPushNotificationTrigger *trigger1 = [[JPushNotificationTrigger alloc] init];
