@@ -1,5 +1,124 @@
 # 最近更新
 
+### iOS SDK v3.7.0
+
+#### 更新时间
+
+2018-09-05
+
+#### ChangeLog
+
+##### BugFix
+
++ 修复用户反馈的一些 bug
++ 修改 iOS 发视频消息 Android 下载缩略图失败
+
+##### NewFeature:
+
++ 新增：群组成员上限修改通知
++ 新增：群昵称功能
++ 新增：群组成员信息类 [JMSGGroupMemberInfo](./client/jmessage_ios_appledoc_html/Classes/JMSGGroupMemberInfo.html)
++ 新增：获取群成员信息接口 [-(void)memberInfoList:](./client/jmessage_ios_appledoc_html/Classes/JMSGGroup.html#//api/name/memberInfoList:)
+
+#### 升级指南
++ 使用新版本的 JMessage.framework 文件替换原工程下的同名旧文件
++ 将新版本的 JMessage.framework 里的 JCore link 到工程中，详细参见官网集成文档
+
+
+### Android SDK v2.7.0
+
+#### 更新时间
+
+2018-08-30
+
+#### ChangeLog
+
+##### BugFix:
++ 修复用户反馈的一些bug
+
+##### NewFeature:
++ 群组成员信息重构，新增GroupMemberInfo代表群组成员信息，原有获取群成员信息返回UserInfo的接口deprecated,新增接口返回GroupMemberInfo
++ 支持获取入群时间
++ 支持群成员昵称功能
+
+#### 升级提示
++ 建议升级！
+
+#### 升级指南
+
++ 首先解压您获取到的 zip 压缩包
+
++ 更新库文件
+	+ 打开libs文件夹。添加jcore-android_v1.2.3.jar。用 jmessage-android_v2.7.0.jar 替换项目中原有的极光jar文件，并删除原有极光jar文件。用对应CPU文件夹下的 libjcore123.so 文件，替换项目中原有的libjcoreXXX.so文件，并删除原有的极光so文件，每种型号的so文件都可以在SDK下载包中找到。
+
++ 更新AndroidManifest.xml
+	+ 请参考 SDK下载包最新版本的 demo 来更新AndroidManifest.xml 文件配置。
+	***注意JMessage 从2.7.0版本开始新增了provider组件，如果项目中使用的JMessage是2.7.0之前的版本，集成时需要注意manifest中新增的provider组件的配置，新增组件：***  
+```
+<!-- Required since JMessage 2.7.0 SDK 核心功能-->
+        <provider
+            android:name="cn.jpush.im.android.helpers.ipc.IMProvider"
+            android:authorities="您自己的包名.IMProvider"
+            android:exported="false" />
+```
+
++ 如果使用jcenter的方式集成JMessage，不需要添加相关组件和资源，详细集成说明请参考官方[集成指南](https://docs.jiguang.cn/jmessage/client/jmessage_android_guide/)
+
+
+### JMRTC Android SDK v1.0.2
+#### 更新时间
+
++ 2018-08-24
+
+#### ChangLog
++ 域名更新，老版本将在9月份停用，请开发者尽快更新sdk
+
+
+#### 集成指南
++ 集成jmessage(需要2.6.0或以上版本)。集成文档见官方[JMessage集成指南](https://docs.jiguang.cn/jmessage/client/jmessage_android_guide/)
+
++ 拷贝jmrtc相关库文件
+	+ 打开libs文件夹。拷贝jmrtc-android_v1.0.2.jar以及agora-rtc-sdk.jar。
+	+ 拷贝CPU文件夹下的.so 文件，每种型号的so文件都可以在SDK下载包中找到。
+
++ 更新AndroidManifest.xml
+	+ 权限声明处增加：
+```
+	<uses-permission android:name="android.permission.RECORD_AUDIO" />  
+	<uses-permission android:name="android.permission.CAMERA" />  
+	<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+```   
+	
++ 如果使用jcenter的方式集成JMRTC，不需要添加相关组件和资源，详细集成说明请参考官方[JMRTC集成指南](https://docs.jiguang.cn/jmessage/client/im_jmrtc_android/)
+
+### JMRTC Android SDK v1.0.1
+
+#### 更新时间
+
++ 2018-07-27
+
+#### ChangLog
+
+##### Bugfix
++ 修复用户反馈的一些bug
+
+#### 集成指南
++ 集成jmessage(需要2.6.0或以上版本)。集成文档见官方[JMessage集成指南](https://docs.jiguang.cn/jmessage/client/jmessage_android_guide/)
+
++ 拷贝jmrtc相关库文件
+	+ 打开libs文件夹。拷贝jmrtc-android_v1.0.1.jar以及agora-rtc-sdk.jar。
+	+ 拷贝CPU文件夹下的.so 文件，每种型号的so文件都可以在SDK下载包中找到。
+
++ 更新AndroidManifest.xml
+	+ 权限声明处增加：
+```
+	<uses-permission android:name="android.permission.RECORD_AUDIO" />  
+	<uses-permission android:name="android.permission.CAMERA" />  
+	<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+```   
+	
++ 如果使用jcenter的方式集成JMRTC，不需要添加相关组件和资源，详细集成说明请参考官方[JMRTC集成指南](https://docs.jiguang.cn/jmessage/client/im_jmrtc_android/)
+
 ### Android SDK v2.6.1
 
 #### 更新时间

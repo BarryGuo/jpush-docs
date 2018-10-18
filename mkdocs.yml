@@ -84,6 +84,10 @@ pages:
     - 'iOS SDK 概述': 'janalytics/client/ios_sdk.md'
     - 'iOS SDK 集成指南': 'janalytics/client/ios_guide.md'
     - 'iOS SDK API': 'janalytics/client/ios_api.md'
+  - QuickApp:
+    - 'QuickApp SDK 概述': 'janalytics/client/quickapp_sdk.md'
+    - 'QuickApp SDK 集成指南': 'janalytics/client/quickapp_guide.md'
+    - 'QuickApp SDK API': 'janalytics/client/quickapp_api.md'
   - 最近更新: 'janalytics/updates.md'
   - 资源下载: 'janalytics/resources.md'
 
@@ -136,6 +140,8 @@ pages:
 
   - 入门指南:
     - '短信验证码概述': 'jsms/guideline/JSMS_guide.md'
+    - '名词解释': 'jsms/guideline/jsms_terminology.md'
+    - '审核标准': 'jsms/guideline/jsms_rules.md'
     - '控制台操作指南': 'jsms/guideline/JSMS_consoleguide.md'
   - Android:
     - 'Android SDK 集成指南': 'jsms/client/Android/android_guide.md'
@@ -177,3 +183,23 @@ pages:
     - 'ErrorCode 定义': 'jshare/client/iOS/jshare_errorcode.md'
   - 最近更新: 'jshare/updates.md'
   - 资源下载: 'jshare/resources.md'
+
+- 极光认证:
+
+  - 入门指南:
+    - 'JVerification 产品介绍': 'jverification/guideline/intro.md'
+    - '控制台使用指南': 'jverification/guideline/portal.md'
+    - '常见问题': 'jverification/guideline/faq.md'
+  - Android:
+    - 'Android SDK 概述': 'jverification/client/android_sdk.md'
+    - 'Android SDK 集成指南': 'jverification/client/android_guide.md'
+    - 'Android SDK API': 'jverification/client/android_api.md'
+  - iOS:
+    - 'iOS SDK 概述': 'jverification/client/ios_sdk.md'
+    - 'iOS SDK 集成指南': 'jverification/client/ios_guide.md'
+    - 'iOS SDK API': 'jverification/client/ios_api.md'
+  - 最近更新: 'jverification/updates.md'
+  - 资源下载: 'jverification/resources.md'
+
+
+
