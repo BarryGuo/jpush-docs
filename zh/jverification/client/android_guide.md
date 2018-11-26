@@ -31,7 +31,7 @@
 + libs/xxx/xx.so
     + sdk需要用的so文件
 + libs/jverification-android-sdk_v1.x.x.jar
-    + SDK jverification 开发包
+    + SDK jverification 开发包
 + example
     + 是一个完整的 Android 项目，通过这个演示了 JVerification SDK 的基本用法，可以用来做参考。
 
@@ -82,12 +82,10 @@
     <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="23" />
 
     <!-- Required -->
-    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
